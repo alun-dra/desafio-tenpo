@@ -1,0 +1,40 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  /* 🔥 RESPONSIVIDAD */
+  @media (max-width: 768px) {
+    .page-container {
+      padding: 40px 15px; /* 🔥 Reducir padding en pantallas pequeñas */
+    }
+  
+    .page-container h2 {
+      font-size: 24px;
+    }
+  
+    .page-container p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page-container {
+      padding: 30px 10px; /* 🔥 Reducir aún más el padding */
+    }
+  
+    .page-container h2 {
+      font-size: 20px;
+    }
+  
+    .page-container p {
+      font-size: 14px;
+    }
+  }
+  

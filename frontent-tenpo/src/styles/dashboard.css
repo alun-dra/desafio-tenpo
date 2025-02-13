@@ -1,0 +1,50 @@
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* 🔹 Espacio cuando el Sidebar está expandido */
+.dashboard-container.expanded .dashboard-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+/* 🔹 Espacio cuando el Sidebar está colapsado */
+.dashboard-container.collapsed .dashboard-content {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+}
+
+/* 🔹 Estilos del contenido */
+.dashboard-content {
+  padding: 20px;
+  width: 100%;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* 🔥 RESPONSIVIDAD */
+@media (max-width: 768px) {
+  .dashboard-container.expanded .dashboard-content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+
+  .dashboard-container.collapsed .dashboard-content {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 480px) {
+  /* 🔥 EN MÓVILES, EL SIDEBAR DEBE SER TOTALMENTE RESPONSIVO */
+  .dashboard-container.expanded .dashboard-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .dashboard-container.collapsed .dashboard-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

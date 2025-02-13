@@ -1,0 +1,132 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: #277e2e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* 🔹 Sidebar oculto en móviles */
+.sidebar.closed {
+  left: -250px;
+}
+
+/* 🔹 Sidebar abierto */
+.sidebar.open {
+  left: 0;
+}
+
+/* 🔹 Sidebar en pantallas grandes (siempre visible) */
+@media (min-width: 769px) {
+  .sidebar {
+    left: 0;
+  }
+}
+
+/* 🔹 Botón hamburguesa flotante en móviles */
+.hamburger-float {
+  padding: 15px;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: #277e2e;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 2000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* 🔹 Estilos de navegación */
+.sidebar nav ul {
+  list-style: none;
+  padding: 15px;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* 🔹 Ajustes de botón cerrar sesión */
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: auto;
+  padding-bottom: 20px;
+}
+
+/* 🔹 Botón cerrar sesión */
+.sidebar .logout {
+  background: #277e2e;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.sidebar .logout:hover {
+  background: #e74c3c;
+}
+
+/* 🔥 RESPONSIVIDAD */
+@media (max-width: 768px) {
+  /* 🔹 Sidebar oculto en móviles por defecto */
+  .sidebar {
+    width: 250px;
+    left: -250px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* 🔹 Ajustar el botón de menú hamburguesa */
+  .hamburger-float {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-footer {
+    padding-bottom: 15px;
+  }
+}
