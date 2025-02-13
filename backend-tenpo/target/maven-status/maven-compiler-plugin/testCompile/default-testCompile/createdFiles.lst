@@ -1,0 +1,4 @@
+com\example\backend_tenpo\repository\TransactionRepositoryTest.class
+com\example\backend_tenpo\service\TransactionServiceTest.class
+com\example\backend_tenpo\controller\TransactionControllerTest.class
+com\example\backend_tenpo\BackendTenpoApplicationTests.class
